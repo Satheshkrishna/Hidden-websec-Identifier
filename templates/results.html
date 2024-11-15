@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details for {{ details.name }}</title>
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <ul>
+        <li>Name: {{ details.name }}</li>
+        <li>Email: {{ details.email }}</li>
+        <li>Location: {{ details.location }}</li>
+        <li>Info: {{ details.user_info }}</li>
+    </ul>
+    <a href="/generate">Generate Another</a>
+</body>
+
+</html>

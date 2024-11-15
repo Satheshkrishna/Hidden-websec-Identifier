@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker's Web Security Identifierc</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        .hacker-container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .hacker-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #50fa7b;
+        }
+
+        .terminal {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #6272a4;
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 15px;
+        }
+
+       
+.red { background-color: #ff5555; }
+.yellow { 
+    width: 20px; /* Adjusted size for logo */
+    height: 20px; /* Adjusted size for logo */
+    background-image: url('./sathesh.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+.green { background-color: #7d5; }
+
+.terminal-body h2, .terminal-body p, .terminal-body h3, .terminal-body pre {
+    margin-top: 100px 0;
+    color: #ccc;
+    white-space: pre-wrap; 
+}
+        
+
+        .scan-box {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: background 0.3s;
+        }
+
+        .scan-box:hover {
+            background-color: #6272a4;
+        }
+
+        .scan-box h2 {
+            font-size: 1.4em;
+            color: #8be9fd;
+            margin: 0 0 10px;
+        }
+
+        .scan-box label {
+            display: block;
+            margin: 5px 0;
+            color: #ffffff;
+        }
+
+        .scan-box input[type="text"],
+        .scan-box input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #6272a4;
+            border-radius: 4px;
+            background-color: white;
+            color: black;
+        }
+
+        .scan-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #50fa7b;
+            color: #282a36;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .scan-box button:hover {
+            background-color: #45c75d;
+        }
+
+        .row1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .row1 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .kill{
+            display: flex;
+            gap: 80px;
+            
+        }
+        img{
+            border-radius: 100%;
+            border-color: #50fa7b;
+            box-shadow: #45c75d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hacker-container">
+        <div class="kill">
+        <img src="static/images/finger.jpg" alt="FINGER" width="50px" width="50px">
+        <!-- <video src="{{ url_for('static', filename='videos/logo-design.mp4') }}" width="60" height="70" controls></video> -->
+        <h1 class="hacker-title">Hidden  Web Security Identifier</h1>
+    </div>
+        <div class="terminal">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="terminal-body">
+                <div class="scan-box">
+                    <p>Welcome to the Hidden Web Security Identifier used to scan web Vulnerability script</p>
+                </div>
+                
+                <div class="row1">
+                    <div class="scan-box">
+                        <h2>[+] Website Port Scanner</h2>
+                        <form action="/scan_nmap" method="POST">
+                            <label for="nmap_url">Enter Target URL:</label>
+                            <input type="text" id="nmap_url" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Run Port Scanner</button>
+                        </form>
+                    </div>
+                    
+                    <div class="scan-box">
+                        <h2>[+] Domain Information Gathering</h2>
+                        <form action="/scan_whois" method="POST">
+                            <label for="whois_url">Enter Domain:</label>
+                            <input type="text" id="whois_url" name="url" placeholder="Enter the domain name" required>
+                            <button type="submit">Run WHOIS Scan</button>
+                        </form>
+                    </div>
+                    
+                    <div class="scan-box">
+                        <h2>[+] Subdomain Enumeration</h2>
+                        <form action="/scan_subdomains" method="POST">
+                            <label for="subdomain_url">Enter Target URL:</label>
+                            <input type="text" id="subdomain_url" name="url" placeholder="Enter the domain name" required>
+                            <button type="submit">Enumerate Subdomains</button>
+                        </form>
+                    </div>
+
+                    <div class="scan-box">
+                        <h2>[+] Clickjacking Protection Check</h2>
+                        <form action="/scan_clickjacking" method="POST">
+                            <label for="clickjack_url">Enter Target URL:</label>
+                            <input type="text" id="clickjack_url" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Check Clickjacking</button>
+                        </form>
+                    </div>
+
+                    <div class="scan-box">
+                        <h2>[+] XSS Vulnerability Scan</h2>
+                        <form action="/scan_xss" method="POST">
+                            <label for="xss_url">Enter Target URL:</label>
+                            <input type="text" id="xss_url" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Run XSS Scan</button>
+                        </form>
+                    </div>
+
+                    <!-- <div class="scan-box">
+                        <h2>[+] OWASP ZAP Scan</h2>
+                        <form action="/scan_zap" method="POST">
+                            <label for="zap_url">Enter Target URL:</label>
+                            <input type="text" id="zap_url" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Run ZAP Scan</button>
+                        </form>
+                    </div> -->
+
+                    <div class="scan-box">
+                        <h2>[+] URL Content Scanner</h2>
+                        <form action="/scan_url" method="POST">
+                            <label for="url_scan">Enter Target URL:</label>
+                            <input type="text" id="url_scan" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Scan URL</button>
+                        </form>
+                    </div>
+
+                    <div class="scan-box">
+                        <h2>[+] Nikto Vulnerability Scan</h2>
+                        <form action="/scan_nikto" method="POST">
+                            <label for="nikto_url">Enter Target URL:</label>
+                            <input type="text" id="nikto_url" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Run vuln Scan</button>
+                        </form>
+                    </div>
+
+                    <div class="scan-box">
+                        <h2>[+] URL Security Check</h2>
+                        <form action="/scan_virustotal" method="POST">
+                            <label for="virustotal_url">Enter Target URL:</label>
+                            <input type="text" id="virustotal_url" name="url" placeholder="Enter the domain name: " required>
+                            <button type="submit">Run  Scan</button>
+                        </form>
+                    </div>
+
+                    <div class="scan-box">
+                        <h2>[+] Phone Number Validator</h2>
+                        <form action="/validate_phone" method="POST">
+                            <label for="phone_number">Enter Phone Number:</label>
+                            <input type="tel" id="phone_number" name="phone" placeholder="+919486565956" required>
+                            <button type="submit">Validate Phone Number</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

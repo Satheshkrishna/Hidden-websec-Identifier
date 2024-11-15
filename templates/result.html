@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results - Web Application Bug Checker</title>
+    <link rel="stylesheet" href="/static/hacker_style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            color: black;
+        }
+
+        .hacker-container {
+            width: 90%;
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            overflow: auto;
+        }
+
+        .hacker-title {
+            text-align: center;
+            font-size: 1.8em;
+            color: #6cf;
+            margin-bottom: 20px;
+        }
+
+        .terminal {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .terminal-header {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .red { background-color: #f65; }
+        .yellow { background-color: #fb5; }
+        .green { background-color: #7d5; }
+
+        .terminal-body h2, .terminal-body p, .terminal-body h3, .terminal-body pre {
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .back-button {
+            color: #6cf;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            color: #5abbdd;
+        }
+
+        .results-line {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #6cf;
+            font-weight: bold;
+        }
+        img{
+            border-radius: 70%;
+            border-color: #50fa7b;
+            box-shadow: #45c75d;
+        }
+        .ten{
+            display: flex;
+            gap: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hacker-container">
+        <div class="ten">
+        <img src="static/images/finger.jpg" alt="" width="40px" height="3   00px">
+        <h1 class="hacker-title">[~] Scan Results [~]</h1>
+    </div>
+        <div class="terminal">
+            <div class="terminal-header">
+                
+            </div>
+            <div class="terminal-body">
+                <h1 class="highlight">{{ tool }}</h1>
+                <h2>Target: <span class="highlight">{{ url }}</span></h2>
+                <div class="results-line">{{ results | replace('\n', '<br>') | safe }}</div>
+                {% if issues %}
+                    <h3>Detected Issues:</h3>
+                    <div class="results-line">{{ issues | replace('\n', '<br>') | safe }}</div>
+                {% endif %}
+                <h3>Security Parameters:</h3>
+                <div class="results-line">{{ security_info | replace('\n', '<br>') | safe }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
