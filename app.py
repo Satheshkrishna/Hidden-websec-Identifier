@@ -6,7 +6,7 @@ import base64
 
 app = Flask(__name__)
 
-API_KEY = "e9f330b1b01f949d611f797f365163ab1045bb129e6db71976bd3432c0a064bf"
+API_KEY = "SECRET_KEY"
 
 # Route for Home Page
 @app.route('/')
